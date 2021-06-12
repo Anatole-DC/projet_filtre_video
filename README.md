@@ -6,7 +6,7 @@
 
 **Date :** 12 juin 2021
 
-**Version :** 1.0.0
+**Version :** 1.2.0
 
 **Licence :** Tous droits réservés
 
@@ -75,3 +75,8 @@ La compilation a généré un fichier `filtre_video.exe`. Pour pouvoir l'execute
 ```
 
 ## Liste des filtres disponibles
+
+GRAYSCALE_FILTER    :   La vidéo est lancée en gris
+BLUR_FILTER         :   La vidéo est floutée
+EDGE_FILTER         :   Affiche le contour des formes sur la vidéo 
+HSV_FILTER          :   Affiche la luminosité sur l'image

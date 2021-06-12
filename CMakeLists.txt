@@ -4,5 +4,7 @@ find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable( filtre_video.exe    src/main.cpp
                                     src/p_utils.cpp
-                                    include/p_utils.hpp )
+                                    src/p_filters.cpp
+                                    include/p_utils.hpp
+                                    include/p_filters.hpp )
 target_link_libraries( filtre_video.exe ${OpenCV_LIBS} )

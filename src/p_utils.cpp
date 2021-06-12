@@ -1,11 +1,4 @@
 #include "../include/p_utils.hpp"
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/opencv.hpp>
-
-using namespace cv;
-using namespace std;
 
 int display_image(string path, string window_name) {
     Mat image = imread(path);
@@ -20,7 +13,7 @@ int display_image(string path, string window_name) {
     return -1;
 }
 
-int display_video(string path, int delay, string window_name) {
+int display_video(string path, Mat (*filter)(Mat), int delay, string window_name) {
     VideoCapture capture(path);
     Mat image;
 
@@ -32,7 +25,7 @@ int display_video(string path, int delay, string window_name) {
                 cerr << "Une erreur est survenue pendant la lecture de la video" << endl;
                 return -1;
             }
-            imshow(window_name, image);
+            imshow(window_name, filter(image));
 
             if (waitKey(delay) == 27) break;
         }
