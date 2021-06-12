@@ -6,7 +6,7 @@
 
 **Date :** 12 juin 2021
 
-**Version :** 1.2.0
+**Version :** 1.5.0
 
 **Licence :** Tous droits réservés
 
