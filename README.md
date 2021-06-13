@@ -79,13 +79,17 @@ La compilation a généré un fichier `filtre_video.exe`. Pour pouvoir l'execute
 ### Filtres de coloration
 
 GRAYSCALE_FILTER    :   La vidéo est lancée en gris
+
 BLUR_FILTER         :   La vidéo est floutée
+
 EDGE_FILTER         :   Affiche le contour des formes sur la vidéo 
+
 HSV_FILTER          :   Affiche la luminosité sur l'image
 
 ### Filters de détection
 
 FACE_FILTER         :   Détecteur de visage
+
 BLUR_FACE_FILTER    :   Floute les visages détectés
 
 ### Filtres peu performants
