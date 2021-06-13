@@ -78,3 +78,24 @@ Mat blur_face_filter(Mat image) {
 
     return new_image;
 }
+
+Mat car_filter(Mat image) {
+    Mat new_image = image;
+
+    CascadeClassifier car_cascade;
+    car_cascade.load("assets/resources/haarcascade_cars.xml");
+
+    if (car_cascade.empty()) {
+        cerr << "Une erreur est survenue lors de l'ouverture du fichier XML" << endl;
+        return image;
+    }
+
+    vector<Rect> cars;
+    car_cascade.detectMultiScale(new_image, cars, 1.1, 10);
+
+    for (int i=0; i<cars.size(); i++) {
+        rectangle(new_image, cars[i].tl(), cars[i].br(), Scalar(0, 128, 0), 3);
+    }
+
+    return new_image;
+}

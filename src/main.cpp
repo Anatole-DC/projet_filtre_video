@@ -43,6 +43,9 @@ int main(int argc, char** argv) {
     } else if (conf[1] == "BLUR_FACE_FILTER") {
         display_video(conf[0], blur_face_filter, 1);
         
+    }  else if (conf[1] == "CAR_FILTER") {
+        display_video(conf[0], car_filter, 10);
+        
     } else {                                                    // Le filtre par défaut
         display_video(conf[0]);
     }

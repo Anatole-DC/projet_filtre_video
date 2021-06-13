@@ -70,6 +70,14 @@ Mat face_detection_filter(Mat image);
 Mat blur_face_filter(Mat image);
 
 /**
+ * Filtre qui détecte les voitures
+ * \param Mat l'image de base
+ * \return Mat l'image modifiée
+ * \author Anatole de Chauveron
+*/
+Mat car_filter(Mat image);
+
+/**
  * Filtre qui isole une couleur sur une image.
  * \param Mat l'image de base
  * \return Mat l'image modifiée
