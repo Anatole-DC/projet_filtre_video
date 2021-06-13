@@ -6,9 +6,14 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    cout << "PROJET FILTER VIDEO" << endl;
+    cout << "PROJET FILTRE VIDEO" << endl;
 
-    cout << "Chargement des paramètes..." << endl;
+    if (argc == 1) {
+        cerr << "Aucun fichier de configuration renseigné." << endl;
+        return 0;
+    }
+
+    cout << "Chargement des paramètres..." << endl;
 
     vector<string> conf = load_conf_file(argv[1]);  // On charge les paramètres de configuration
 
@@ -31,6 +36,9 @@ int main(int argc, char** argv) {
         
     } else if (conf[1] == "HSV_FILTER") {
         display_video(conf[0], hsv_filter);
+        
+    } else if (conf[1] == "FACE_FILTER") {
+        display_video(conf[0], face_detection_filter, 1);
         
     } else {                                                    // Le filtre par défaut
         display_video(conf[0]);

@@ -5,7 +5,10 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/opencv.hpp>
+#include <opencv2/objdetect.hpp>
+#include <iostream>
 
+using namespace std;
 using namespace cv;
 
 /**
@@ -47,5 +50,39 @@ Mat edge_filter(Mat image);
  * \author Anatole de Chauveron
 */
 Mat hsv_filter(Mat image);
+
+/*********************** ADVANCED FILTERS ***********************/
+
+/**
+ * Filtre qui détecte les visages sur une vidéo.
+ * \param Mat l'image de base
+ * \return Mat l'image modifiée
+ * \author Anatole de Chauveron
+*/
+Mat face_detection_filter(Mat image);
+
+/**
+ * Filtre qui floute les visages sur une vidéo.
+ * \param Mat l'image de base
+ * \return Mat l'image modifiée
+ * \author Anatole de Chauveron
+*/
+Mat blur_face_filter(Mat image);
+
+/**
+ * Filtre qui isole une couleur sur une image.
+ * \param Mat l'image de base
+ * \return Mat l'image modifiée
+ * \author Anatole de Chauveron
+*/
+Mat color_iso_filter(Mat image);
+
+/**
+ * Filtre qui détecte les différentes formes et objets sur une vidéo.
+ * \param Mat l'image de base
+ * \return Mat l'image modifiée
+ * \author Anatole de Chauveron
+*/
+Mat multiple_object_detection_filter(Mat image);
 
 #endif // P_FILTER_HPP_INCLUDED
