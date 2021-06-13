@@ -95,7 +95,7 @@ EDGE_FILTER         :   Affiche le contour des formes sur la vidéo
 
 HSV_FILTER          :   Affiche la luminosité sur l'image
 
-### Filters de détection
+### Filtres de détection
 
 FACE_FILTER         :   Détecteur de visage
 
