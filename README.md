@@ -71,7 +71,16 @@ make
 La compilation a généré un fichier `filtre_video.exe`. Pour pouvoir l'executer, dans votre invite de commande, entrez la commande suivante.
 
 ```bash
-./filtre_video.exe fichier.conf
+./filtre_video.exe exemple.conf
+```
+
+### Fichier de configuration
+
+Les fichiers de configuration permettent de renseigner l'adresse des vidéos à filtrer ainsi que le filtre à appliquer sur ces dernières. Pour créer vos propres fichiers de configuration, vous devez mettre les paramètres suivants comme tel :
+
+```bash
+videolink = "chemin/vers/la/video"      # Ne pas oublier l'extension
+filter = FILTRE                         # Liste des filtres disponibles à la fin du readme
 ```
 
 ## Liste des filtres disponibles
