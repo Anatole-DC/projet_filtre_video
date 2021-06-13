@@ -56,3 +56,25 @@ Mat face_detection_filter(Mat image) {
 
     return new_image;
 }
+
+Mat blur_face_filter(Mat image) {
+    Mat new_image = image;
+
+    CascadeClassifier face_cascade;
+    face_cascade.load("assets/resources/haarcascade_frontalface_default.xml");
+
+    if (face_cascade.empty()) {
+        cerr << "Une erreur est survenue lors de l'ouverture du fichier XML" << endl;
+        return image;
+    }
+
+    vector<Rect> faces;
+    face_cascade.detectMultiScale(new_image, faces, 1.1, 10);
+
+    for (int i=0; i<faces.size(); i++) {
+        Rect zone_to_blur = Rect(faces[i].tl(), faces[i].br());
+        GaussianBlur(new_image(zone_to_blur), new_image(zone_to_blur), Size(51, 51), 0);
+    }
+
+    return new_image;
+}
