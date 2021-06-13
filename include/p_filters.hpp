@@ -78,6 +78,14 @@ Mat blur_face_filter(Mat image);
 Mat car_filter(Mat image);
 
 /**
+ * Filtre qui détecte les plaques d'immatriculation
+ * \param Mat l'image de base
+ * \return Mat l'image modifiée
+ * \author Anatole de Chauveron
+*/
+Mat licence_plate_filter(Mat image);
+
+/**
  * Filtre qui isole une couleur sur une image.
  * \param Mat l'image de base
  * \return Mat l'image modifiée

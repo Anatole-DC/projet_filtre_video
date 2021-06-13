@@ -47,6 +47,7 @@ int main(int argc, char** argv) {
         display_video(conf[0], car_filter, 10);
         
     } else {                                                    // Le filtre par défaut
+        cout << "Le filtre n'existe pas ou n'a pas été indiqué. Aucun filtre ne sera appliqué." << endl;
         display_video(conf[0]);
     }
 
