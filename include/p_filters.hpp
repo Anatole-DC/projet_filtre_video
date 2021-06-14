@@ -78,27 +78,13 @@ Mat blur_face_filter(Mat image);
 Mat car_filter(Mat image);
 
 /**
- * Filtre qui détecte les plaques d'immatriculation
+ * Filtre qui détecte si une personne porte un masque ou si elle n'en porte pas
  * \param Mat l'image de base
  * \return Mat l'image modifiée
  * \author Anatole de Chauveron
 */
-Mat licence_plate_filter(Mat image);
+Mat mask_detection_filter(Mat image);
 
-/**
- * Filtre qui isole une couleur sur une image.
- * \param Mat l'image de base
- * \return Mat l'image modifiée
- * \author Anatole de Chauveron
-*/
-Mat color_iso_filter(Mat image);
 
-/**
- * Filtre qui détecte les différentes formes et objets sur une vidéo.
- * \param Mat l'image de base
- * \return Mat l'image modifiée
- * \author Anatole de Chauveron
-*/
-Mat multiple_object_detection_filter(Mat image);
 
 #endif // P_FILTER_HPP_INCLUDED
