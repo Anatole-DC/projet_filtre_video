@@ -46,7 +46,12 @@ int main(int argc, char** argv) {
     }  else if (conf[1] == "CAR_FILTER") {
         display_video(conf[0], car_filter, 10);
         
-    } else {                                                    // Le filtre par défaut
+    }
+    // else if (conf[1] == "MASK_FILTER") {
+    //     display_video(conf[0], mask_detection_filter, 1);
+        
+    // }
+    else {                                                    // Le filtre par défaut
         cout << "Le filtre n'existe pas ou n'a pas été indiqué. Aucun filtre ne sera appliqué." << endl;
         display_video(conf[0]);
     }

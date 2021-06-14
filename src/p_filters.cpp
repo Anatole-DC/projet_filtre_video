@@ -99,3 +99,43 @@ Mat car_filter(Mat image) {
 
     return new_image;
 }
+
+// Mat mask_detection_filter(Mat image) {
+//     Mat new_image = image;
+
+//     CascadeClassifier eye_cascade;
+//     eye_cascade.load("assets/resources/haarcascade_eye.xml");
+
+//     CascadeClassifier mouth_cascade;
+//     mouth_cascade.load("assets/resources/haarcascade_mouth.xml");
+
+//     if (eye_cascade.empty() || mouth_cascade.empty()) {
+//         cerr << "Une erreur est survenue lors de l'ouverture des fichiers XML" << endl;
+//         return image;
+//     }
+
+//     vector<Rect> eyes;
+//     eye_cascade.detectMultiScale(new_image, eyes, 1.1, 10);
+
+//     vector<Rect> mouths;
+
+//     if (eyes.size() == 0) {
+//         return new_image;
+//     } else {
+//         rectangle(new_image, eyes[0].tl(), eyes.back().br(), Scalar(255, 255, 255), 3);
+
+//         mouth_cascade.detectMultiScale(new_image, mouths, 1.1, 10);
+
+//         if (mouths.size() == 0) {
+//             for (int i=0; i<eyes.size(); i++) {
+//                 rectangle(new_image, eyes[0].tl(), eyes.back().br(), Scalar(0, 255, 0), 3);
+//             }
+//         } else {
+//             for (int i=0; i<eyes.size(); i++) {
+//                 rectangle(new_image, eyes[0].tl(), eyes.back().br(), Scalar(0, 0, 255), 3);
+//             }
+//         }
+//     }
+
+//     return new_image;
+// }
